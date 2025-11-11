@@ -1,0 +1,211 @@
+/* Small extra styles specific to the Alexandre Bredillot portfolio */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Profile Avatar */
+.profile-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  color: #fff;
+  background: linear-gradient(135deg, #0BCEAF 0%, #078571 100%);
+  box-shadow: 0 6px 18px rgba(11,206,175,0.18);
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-avatar-lg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #fff;
+  background: linear-gradient(135deg, #0BCEAF 0%, #078571 100%);
+  box-shadow: 0 6px 18px rgba(11,206,175,0.12);
+}
+
+/* Small spacing tweaks */
+header#home { padding-top: 5rem; }
+.card-link { color: var(--primary); }
+.card-link:hover { text-decoration: underline; }
+
+/* Project cards with hover effect */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary, #0BCEAF);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background: #078571;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-1px);
+}
+
+/* Button enhancements */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Section animations */
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    animation: fadeIn 0.6s ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  font-size: 0.85rem;
+}
+
+/* Link hover effects */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Footer social icons */
+footer a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+footer a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+/* Navbar enhancement */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary, #0BCEAF);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  .profile-avatar { width: 140px; height: 140px; font-size: 48px; }
+  header#home { padding-top: 4rem; }
+  .scroll-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 18px; }
+}
+
+/* End of portfolio extras */
+
+/* Centering helpers for small groups that use mb-4 / mt-3 wrappers */
+/* Keep button groups centered in hero and other places */
+.mb-4.d-flex,
+.mb-4.d-flex.flex-wrap,
+.mb-4.justify-content-center,
+.mt-3.d-flex,
+.mt-3.d-flex.flex-wrap,
+.mt-3.justify-content-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Fallback: center inline children when not using flex utilities */
+header .mb-4, header .mt-3, footer .mb-4 { text-align: center; }
+
+/* Ensure rows keep spacing but don't break centering */
+.row > .mb-4 { margin-bottom: 1.5rem !important; }
+
+/* Specific header button group layout */
+header .mt-3 .btn { min-width: 110px; }
+
+/* Small responsive tweak: stack header CTAs on very small screens */
+@media (max-width: 420px) {
+  header .mt-3 { gap: 0.4rem; }
+  header .mt-3 .btn { min-width: 100%; }
+}
+
+/* Keep experience blocks left-aligned to match the rest of the content */
+#experience .mb-4 {
+  text-align: left;
+}
+
+#experience .mb-4 ul {
+  display: block;
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
