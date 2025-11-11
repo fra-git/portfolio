@@ -44,7 +44,7 @@
   <body>
 
 <!-- NAV -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #000000 !important;" role="navigation" aria-label="Main navigation">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm transparent-nav" role="navigation" aria-label="Main navigation">
   <div class="container px-4">
     <a class="navbar-brand" href="#home">Francesco Cimarra</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
         <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#education">Associations</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -172,8 +172,6 @@
         </div>
       </section>
 
-
-
       <!-- COURSES -->
       <section id="courses" class="py-5 bg-light">
         <div class="container">
@@ -184,7 +182,6 @@
         </div>
       </section>
 
-      
       <!-- PROJECTS -->
       <section id="projects" class="py-5 bg-light">
         <div class="container">
@@ -287,7 +284,7 @@
         $(document).on('click','a.nav-link[href^="#"], a.btn[href^="#"]', function(e){
           e.preventDefault();
           var target = $(this.hash);
-          if(target.length){ $('html,body').animate({scrollTop: target.offset().top - 70}, 400); }
+          if(target.length){ $('html,body').animate({scrollTop: target.offset().top - 90}, 400); }
         });
 
         // Scroll to top button
