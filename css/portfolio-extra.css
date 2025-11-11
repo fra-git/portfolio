@@ -209,3 +209,47 @@ header .mt-3 .btn { min-width: 110px; }
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
+
+
+/* CSS per la sezione HERO con immagine di sfondo a pieno schermo e overlay */
+#home {
+    background-image: url('../img/windsurfing-8-1341917387.jpg'); /* Sostituisci con il percorso della tua immagine */
+    background-size: cover; /* Copre l'intera area */
+    background-position: center center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+    position: relative; /* Necessario per l'overlay */
+    z-index: 1; /* Assicura che l'header sia sopra il resto */
+}
+
+/* Overlay sfumato per rendere il testo più leggibile */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Questo crea un overlay nero semi-trasparente */
+    background-color: rgba(0, 0, 0, 0.5); /* Nero con 50% di opacità */
+    /* Puoi usare un gradient per una sfumatura più complessa, es: */
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%); */
+    z-index: -1; /* Metti l'overlay dietro il contenuto del testo */
+}
+
+/* Assicurati che il contenuto del testo sia sopra l'overlay */
+#home .container {
+    position: relative;
+    z-index: 2; /* Metti il contenuto del testo sopra l'overlay */
+}
+
+/* Rimuovi lo sfondo primario dato da Bootstrap sull'header */
+/* Questo è importante perché l'immagine di background la imposteremo noi via CSS */
+#home.bg-primary {
+    background-color: transparent !important;
+}
+
+/* Assicurati che il testo della sezione sia sempre bianco per leggibilità */
+#home h1, #home p {
+    color: #FFFFFF !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Aggiunge un'ombra al testo per renderlo più leggibile */
+}
