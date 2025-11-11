@@ -1,4 +1,4 @@
-# Francesco Bredillot - Portfolio Website
+# Francesco Cimarra - Portfolio Website
 
 > MSc Data Analytics & AI student @ EDHEC BUSINESS SCHOOL
 
