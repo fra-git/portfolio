@@ -58,7 +58,7 @@
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Associations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#associations">Associations</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -191,9 +191,91 @@
       <section id="courses" class="py-5 bg-light">
         <div class="container">
           <h3 class="section-title">Courses</h3>
+          
           <div class="row">
-                QUA METTO I CORSI
+            <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Python Programming L</h5>
+                  <p class="card-text">Procedural programming, data analysis libraries (NumPy, pandas, statsmodels, matplotlib)</p>
+                </div>
+              </div>
+            </div>
+
+                <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Statistical Models</h5>
+                  <p class="card-text">Regression modelling, inference, model diagnostics using Python</p>
+                </div>
+              </div>
+            </div>
+
+          <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Datamining</h5>
+                  <p class="card-text">Pattern discovery, anomaly detection, supervised/unsupervised learning for business data</p>
+                </div>
+              </div>
+            </div>
+            
           </div>
+      <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Machine Learning</h5>
+                  <p class="card-text">SVMs, decision trees, ensemble methods, regularisation, model evaluation</p>
+                </div>
+              </div>
+            </div>
+                <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Deep Learning</h5>
+                  <p class="card-text">Neural networks, CNN/RNN architectures, training & optimisation with Keras</p>
+                </div>
+              </div>
+            </div>
+          <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Natural Language Processing</h5>
+                  <p class="card-text">Text mining, topic modelling, sentiment analysis, intro to Large Language Models</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+               <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Time Series</h5>
+                  <p class="card-text">ARIMA/SARIMA models, volatility models, ML approaches for forecasting</p>
+                </div>
+              </div>
+            </div>
+                <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">Inside Sport Industry</h5>
+                  <p class="card-text">Business models, fan engagement and revenue optimisation in the sports industry</p>
+                </div>
+              </div>
+            </div>
+          <div class="col-md-6 mb-4">
+              <div class="card shadow-sm h-100 project-card">
+                <div class="card-body">
+                  <h5 class="card-title">CAPM – Certified Associate in Project Management (PMI)</h5>
+                  <p class="card-text">Training starting **March 2025**, aimed at strengthening project management fundamentals in data/AI environments</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </section>
 
@@ -239,16 +321,16 @@
       </section>
 
       <!-- ASSOCIATIONS -->
-      <section id="courses" class="py-5 bg-light">
+      <section id="associations" class="py-5 bg-light">
         <div class="container">
           <h3 class="section-title">Associations</h3>
           <div class="mb-4">
             <h5>Starting Finance Club Siena</h5>
-            <h4>Vice President</h4>
+            <h6>Vice President</h6>
             <p class="small text-muted">July 2024 - April 2025 | Siena, Italy</p>
-            <h4>Head of Social Media division</h4>
+            <h6>Head of Social Media division</h6>
             <p class="small text-muted">March 2024 - November 2024 | Siena, Italy</p>
-            <h4>Social Media Manager</h4>
+            <h6>Social Media Manager</h6>
             <p class="small text-muted">May 2023 - March 2024 | Angeli di Rosora, Italy</p>
             <ul>
               <li>Contributed to the Association’s mission to promote economic and financial education among Italian students through events and digital outreach.</li>
@@ -311,7 +393,7 @@
         $(document).on('click','a.nav-link[href^="#"], a.btn[href^="#"]', function(e){
           e.preventDefault();
           var target = $(this.hash);
-          if(target.length){ $('html,body').animate({scrollTop: target.offset().top - 90}, 400); }
+          if(target.length){ $('html,body').animate({scrollTop: target.offset().top - 105}, 400); }
         });
 
         // Scroll to top button
