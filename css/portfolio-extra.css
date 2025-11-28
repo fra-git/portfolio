@@ -213,7 +213,7 @@ header .mt-3 .btn { min-width: 110px; }
 
 /* CSS per la sezione HERO con immagine di sfondo a pieno schermo e overlay */
 #home {
-    background-image: url('../img/windsurfing-8-1341917387.jpg'); /* Sostituisci con il percorso della tua immagine */
+    background-image: url('../img/space.jpg'); /* Sostituisci con il percorso della tua immagine */
     background-size: cover; /* Copre l'intera area */
     background-position: center center; /* Centra l'immagine */
     background-repeat: no-repeat; /* Non ripete l'immagine */
