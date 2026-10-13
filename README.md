@@ -18,7 +18,7 @@ No build step, no framework, no dependencies apart from the Geist fonts loaded f
 
 ## Hidden blocks, ready to switch on
 
-Three blocks are already written in `index.html` but hidden inside HTML comments. Each one is wrapped between a `…-START` line and a `…-END -->` line; delete those two lines to show the block.
+Five blocks are already written in `index.html` but hidden inside HTML comments. Each one is wrapped between a `…-START` line and a `…-END -->` line; delete those two lines to show the block.
 
 **Email** (`EMAIL-START` … `EMAIL-END`, Contact section)
 1. Delete the two marker lines.
@@ -28,6 +28,14 @@ Three blocks are already written in `index.html` but hidden inside HTML comments
 **CV** (`CV-START` … `CV-END`, Contact section)
 1. Upload the PDF, e.g. as `assets/Francesco-Cimarra-CV.pdf`.
 2. Delete the two marker lines and set `href="assets/Francesco-Cimarra-CV.pdf"`.
+
+**Hobbies** (`HOBBIES-START` … `HOBBIES-END`, “Beyond work” card in About)
+1. Delete the two marker lines.
+2. Replace the `[HOBBY n]` chips; copy an `<li>` to add one.
+
+**Certifications** (`CERTIFICATIONS-START` … `CERTIFICATIONS-END`, end of Education)
+1. Delete the two marker lines.
+2. Fill in each row (name, issuer, year) and the `[NUMBER] certifications` label; copy or delete `<li>` rows as needed.
 
 **Projects section** (`PROJECTS-START` … `PROJECTS-END`, between Experience and Education)
 1. Delete the two marker lines.

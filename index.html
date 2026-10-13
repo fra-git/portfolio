@@ -75,6 +75,7 @@
     <symbol id="i-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6M5 11.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/></symbol>
     <symbol id="i-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0M16 4.9a3.2 3.2 0 0 1 0 6.2M17.6 14.4a5.5 5.5 0 0 1 2.9 5.1"/></symbol>
     <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.6 13.9-1.6 7.1 5-2.8 5 2.8-1.6-7.1"/></symbol>
     <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/></symbol>
     <!-- Flags (3:2) -->
     <symbol id="flag-it" viewBox="0 0 3 2"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#f4f5f0"/><rect x="2" width="1" height="2" fill="#ce2b37"/></symbol>
@@ -241,7 +242,15 @@
               <li>Geopolitics</li>
               <li>International relations</li>
             </ul>
-            <div class="places">
+            <!-- HOBBIES-START: to show your hobbies, delete this line and the HOBBIES-END line, then replace the [HOBBY] chips (copy an li to add one)
+            <div class="tile-split">
+              <p class="tile-label">Hobbies</p>
+              <ul class="chips" role="list" aria-label="Hobbies">
+                <li>[HOBBY 1]</li><li>[HOBBY 2]</li><li>[HOBBY 3]</li>
+              </ul>
+            </div>
+            HOBBIES-END -->
+            <div class="tile-split">
               <p class="tile-label">Lived &amp; studied in</p>
               <ul class="place-list" role="list">
                 <li><svg class="flag" aria-hidden="true" focusable="false"><use href="#flag-it"/></svg><span>Italy<small>Fabriano · Siena · Frascati</small></span></li>
@@ -479,6 +488,21 @@
             <p class="edu-degree">High school diploma · IT &amp; Telecommunications</p>
             <p class="edu-text">Technical diploma in computing and telecommunications, followed directly by a software developer role at Loccioni.</p>
           </article>
+
+          <!-- CERTIFICATIONS-START: to show your certifications, delete this line and the CERTIFICATIONS-END line, then fill in the rows (copy an li to add one, delete the ones you do not need)
+          <article class="edu-card edu-card-wide" data-reveal>
+            <div class="edu-top">
+              <span class="edu-icon"><svg aria-hidden="true" focusable="false"><use href="#i-award"/></svg></span>
+              <p class="edu-meta">[NUMBER] certifications</p>
+            </div>
+            <h3>Certifications</h3>
+            <ul class="cert-list" role="list">
+              <li><span class="cert-name">[CERTIFICATION 1]</span><span class="cert-issuer">[ISSUER]</span><span class="cert-year">[YEAR]</span></li>
+              <li><span class="cert-name">[CERTIFICATION 2]</span><span class="cert-issuer">[ISSUER]</span><span class="cert-year">[YEAR]</span></li>
+              <li><span class="cert-name">[CERTIFICATION 3]</span><span class="cert-issuer">[ISSUER]</span><span class="cert-year">[YEAR]</span></li>
+            </ul>
+          </article>
+          CERTIFICATIONS-END -->
         </div>
       </div>
     </section>
