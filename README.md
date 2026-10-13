@@ -16,24 +16,32 @@ assets/img/             favicon, Apple touch icon, social preview image (og-imag
 
 No build step, no framework, no dependencies apart from the Geist fonts loaded from Google Fonts. The page works without JavaScript.
 
-## Filling in the placeholders
+## Hidden blocks, ready to switch on
 
-Search `index.html` for `[` to find every placeholder:
+Three blocks are already written in `index.html` but hidden inside HTML comments. Each one is wrapped between a `…-START` line and a `…-END -->` line; delete those two lines to show the block.
 
-| Placeholder | Where | What to put |
-| --- | --- | --- |
-| `[WHAT YOU’RE LOOKING FOR …]`, `[DATE]` | About, “Looking for” box | Role type and availability date |
-| `[PROJECT 1–3 …]`, `[YEAR]`, `[DOMAIN]`, `[Tech 1–3]` | Projects | Title, summary, problem, result, technologies |
-| `[PROJECT n — GitHub URL]`, `[PROJECT 1 — Demo URL]` | Projects | Repository and demo links; delete a link if it does not exist |
-| `[STATUS …]` | Education, CAPM box | Certification status |
-| `[EMAIL]` | Contact | Your address, in both `href="mailto:…"` and the link text |
-| `[CV_URL]` | Contact | Upload the PDF, e.g. `assets/Francesco-Cimarra-CV.pdf`, and link it |
+**Email** (`EMAIL-START` … `EMAIL-END`, Contact section)
+1. Delete the two marker lines.
+2. Replace `[EMAIL]` twice: in `href="mailto:[EMAIL]"` and in the link text.
+3. Optionally change the Contact intro to say email is the fastest way to reach you.
 
-To add a fourth project, copy one of the `<article class="project-card">` blocks. Only the first card has `is-featured`, which makes it span the full width.
+**CV** (`CV-START` … `CV-END`, Contact section)
+1. Upload the PDF, e.g. as `assets/Francesco-Cimarra-CV.pdf`.
+2. Delete the two marker lines and set `href="assets/Francesco-Cimarra-CV.pdf"`.
+
+**Projects section** (`PROJECTS-START` … `PROJECTS-END`, between Skills and Experience)
+1. Delete the two marker lines.
+2. Fill in the cards: replace every `[…]` (title, year, domain, summary, problem, result, technologies, links). Delete a link if it does not exist.
+3. Add `<li><a href="#projects">Projects</a></li>` to the nav, after Skills.
+4. Renumber the section labels: Projects `03`, Trajectory `04`, Contact `05`.
+5. Optionally point the hero button back to `#projects` with the text “View projects”.
+
+Card layout: the first card has `is-featured` and spans the full width. With 3 projects keep it as is; with 2 or 4 projects remove `is-featured` so the cards form an even grid. To add a card, copy an `<article class="project-card">` block.
 
 ## Keep up to date
 
 - **After the ESA internship ends (Nov 2026):** update the hero status chip, the “Currently” stat, the `is-current` markers in the timeline, `jobTitle`/`worksFor` in the JSON-LD block in `<head>`, and regenerate `assets/img/og-image.png`, which also mentions ESA.
+- **Availability:** “early 2027” appears in the About “Looking for” box and next to “Open to new opportunities” in Contact.
 - **Accent colour:** change `--accent` (and `--accent-*`) in `assets/css/style.css`.
 
 ## Local preview

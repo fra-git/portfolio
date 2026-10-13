@@ -7,7 +7,6 @@
 :root {
   /* Colour */
   --bg: #060a13;
-  --bg-raise: #0a101c;
   --line: rgb(148 180 220 / 0.14);
   --line-strong: rgb(148 180 220 / 0.26);
   --text: #eaf1f8;
@@ -578,7 +577,7 @@ small { font-size: inherit; }
   .skills-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* ---------- 03 Projects ---------- */
+/* ---------- Projects (section hidden in index.html until projects are added) ---------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -670,7 +669,7 @@ small { font-size: inherit; }
   .project-card.is-featured { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* ---------- 04 Experience & education ---------- */
+/* ---------- 03 Experience & education ---------- */
 .journey-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -748,22 +747,11 @@ small { font-size: inherit; }
 }
 .tl-points li::marker { color: var(--dim); }
 
-.cert {
-  display: grid;
-  gap: 4px;
-  margin-top: 40px;
-  padding: 18px 20px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: var(--bg-raise);
-}
-.cert strong { font-weight: 500; }
-
 @media (max-width: 860px) {
   .journey-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* ---------- 05 Contact ---------- */
+/* ---------- 04 Contact ---------- */
 .section-contact {
   position: relative;
   overflow: hidden;
