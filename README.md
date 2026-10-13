@@ -10,7 +10,7 @@ Live site: https://fra-git.github.io/portfolio/
 index.html              all page content
 assets/css/style.css    styles; colours, fonts and spacing are tokens in :root at the top
 assets/js/main.js       mobile menu, active nav link, scroll fade-in, copy-email button
-assets/img/             favicon, Apple touch icon, social preview image (og-image.png)
+assets/img/             favicon (FC monogram, SVG + PNG), Apple touch icon, social preview image (og-image.png)
 .nojekyll               tells GitHub Pages to serve the files as they are
 ```
 
@@ -29,19 +29,20 @@ Three blocks are already written in `index.html` but hidden inside HTML comments
 1. Upload the PDF, e.g. as `assets/Francesco-Cimarra-CV.pdf`.
 2. Delete the two marker lines and set `href="assets/Francesco-Cimarra-CV.pdf"`.
 
-**Projects section** (`PROJECTS-START` … `PROJECTS-END`, between Skills and Experience)
+**Projects section** (`PROJECTS-START` … `PROJECTS-END`, between Experience and Education)
 1. Delete the two marker lines.
 2. Fill in the cards: replace every `[…]` (title, year, domain, summary, problem, result, technologies, links). Delete a link if it does not exist.
-3. Add `<li><a href="#projects">Projects</a></li>` to the nav, after Skills.
-4. Renumber the section labels: Projects `03`, Trajectory `04`, Contact `05`.
+3. Add `<li><a href="#projects">Projects</a></li>` to the nav, after Experience.
+4. Renumber the section labels: Projects `03`, Education `04`, Systems `05`, Contact `06`.
 5. Optionally point the hero button back to `#projects` with the text “View projects”.
 
 Card layout: the first card has `is-featured` and spans the full width. With 3 projects keep it as is; with 2 or 4 projects remove `is-featured` so the cards form an even grid. To add a card, copy an `<article class="project-card">` block.
 
 ## Keep up to date
 
-- **After the ESA internship ends (Nov 2026):** update the hero status chip, the “Currently” stat, the `is-current` markers in the timeline, `jobTitle`/`worksFor` in the JSON-LD block in `<head>`, and regenerate `assets/img/og-image.png`, which also mentions ESA.
+- **After the ESA internship ends (Nov 2026):** update the hero status chip, the “Currently” stat, the “Currently” tile in About, the `is-current` timeline item and “Current” badges, `jobTitle`/`worksFor` in the JSON-LD block in `<head>`, and regenerate `assets/img/og-image.png`, which also mentions ESA.
 - **Availability:** “early 2027” appears in the About “Looking for” box and next to “Open to new opportunities” in Contact.
+- **Skills marked as professional use:** chips with `class="is-pro"` get the cyan highlight; keep that class only for tools used in a job.
 - **Accent colour:** change `--accent` (and `--accent-*`) in `assets/css/style.css`.
 
 ## Local preview
