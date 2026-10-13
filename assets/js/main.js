@@ -149,3 +149,93 @@
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
 })();
+
+/* ---------- Hero tagline: rotate phrases with a scramble transition ---------- */
+(function () {
+  "use strict";
+
+  var el = document.querySelector("[data-rotator]");
+  if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  var phrases;
+  try { phrases = JSON.parse(el.getAttribute("data-rotator")); } catch (e) { return; }
+  if (!Array.isArray(phrases) || phrases.length < 2) return;
+
+  var GLYPHS = "!<>-_\\/[]{}=+*^?#%&$01";
+  var HOLD_MS = 2800;
+  var index = 0;
+  var queue = [];
+  var frame = 0;
+  var rafId = 0;
+  var timerId = 0;
+  var inView = true;
+
+  var escapeHtml = function (ch) {
+    return ch === "<" ? "&lt;" : ch === ">" ? "&gt;" : ch === "&" ? "&amp;" : ch;
+  };
+
+  var render = function () {
+    var html = "";
+    var settled = 0;
+    for (var i = 0; i < queue.length; i++) {
+      var q = queue[i];
+      if (frame >= q.end) {
+        settled++;
+        html += escapeHtml(q.to);
+      } else if (frame >= q.start && q.to !== " ") {
+        if (!q.glyph || Math.random() < 0.3) q.glyph = GLYPHS.charAt(Math.floor(Math.random() * GLYPHS.length));
+        html += '<span class="glyph">' + escapeHtml(q.glyph) + "</span>";
+      } else {
+        html += escapeHtml(frame >= q.start ? q.to : q.from);
+      }
+    }
+    el.innerHTML = html;
+    if (settled === queue.length) {
+      schedule();
+      return;
+    }
+    frame++;
+    rafId = window.requestAnimationFrame(render);
+  };
+
+  var scrambleTo = function (next) {
+    var current = el.textContent;
+    var length = Math.max(current.length, next.length);
+    queue = [];
+    for (var i = 0; i < length; i++) {
+      var start = Math.floor(Math.random() * 16);
+      queue.push({
+        from: current.charAt(i),
+        to: next.charAt(i),
+        start: start,
+        end: start + 10 + Math.floor(Math.random() * 18),
+        glyph: ""
+      });
+    }
+    frame = 0;
+    window.cancelAnimationFrame(rafId);
+    render();
+  };
+
+  var schedule = function () {
+    window.clearTimeout(timerId);
+    timerId = window.setTimeout(function () {
+      // Pause while the hero is off screen or the tab is hidden.
+      if (!inView || document.hidden) return;
+      index = (index + 1) % phrases.length;
+      scrambleTo(phrases[index]);
+    }, HOLD_MS);
+  };
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView) schedule();
+    }).observe(el);
+  }
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) schedule();
+  });
+
+  schedule();
+})();

@@ -49,6 +49,7 @@ Card layout: the first card has `is-featured` and spans the full width. With 3 p
 ## Keep up to date
 
 - **After the ESA internship ends (Nov 2026):** update the hero status chip, the “Currently” stat, the “Currently” tile in About, the `is-current` timeline item and “Current” badges, `jobTitle`/`worksFor` in the JSON-LD block in `<head>`, and regenerate `assets/img/og-image.png`, which also mentions ESA.
+- **Hero phrases:** the rotating words after “Data & AI for” are the list in `data-rotator` (index.html, hero). Keep each phrase short enough for two lines; the first one is also the text shown without JavaScript and in the hidden screen-reader line next to it.
 - **Availability:** “early 2027” appears in the About “Looking for” box and next to “Open to new opportunities” in Contact.
 - **Skills marked as professional use:** chips with `class="is-pro"` get the cyan highlight; keep that class only for tools used in a job.
 - **Accent colour:** change `--accent` (and `--accent-*`) in `assets/css/style.css`.
