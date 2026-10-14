@@ -1,6 +1,6 @@
 # Francesco Cimarra — Portfolio
 
-One-page portfolio for **Francesco Cimarra**, Data & AI professional with a software engineering background, IT & Data Tools Intern at the European Space Agency and MSc Data Science & AI student at EDHEC Business School.
+One-page portfolio, Data & AI graduate with a software engineering background, Intern at the European Space Agency and MSc Data Science & AI student at EDHEC Business School.
 
 Live site: https://fra-git.github.io/portfolio/
 
@@ -15,51 +15,3 @@ assets/img/             favicon (FC monogram, SVG + PNG), Apple touch icon, soci
 ```
 
 No build step, no framework, no dependencies apart from the Geist fonts loaded from Google Fonts. The page works without JavaScript.
-
-## Hidden blocks, ready to switch on
-
-Five blocks are already written in `index.html` but hidden inside HTML comments. Each one is wrapped between a `…-START` line and a `…-END -->` line; delete those two lines to show the block.
-
-**Email** (`EMAIL-START` … `EMAIL-END`, Contact section)
-1. Delete the two marker lines.
-2. Replace `[EMAIL]` twice: in `href="mailto:[EMAIL]"` and in the link text.
-3. Optionally change the Contact intro to say email is the fastest way to reach you.
-
-**CV** (`CV-START` … `CV-END`, Contact section)
-1. Upload the PDF, e.g. as `assets/Francesco-Cimarra-CV.pdf`.
-2. Delete the two marker lines and set `href="assets/Francesco-Cimarra-CV.pdf"`.
-
-**Hobbies** (`HOBBIES-START` … `HOBBIES-END`, “Beyond work” card in About)
-1. Delete the two marker lines.
-2. Replace the `[HOBBY n]` chips; copy an `<li>` to add one.
-
-**Certifications** (`CERTIFICATIONS-START` … `CERTIFICATIONS-END`, end of Education)
-1. Delete the two marker lines.
-2. Fill in each row (name, issuer, year) and the `[NUMBER] certifications` label; copy or delete `<li>` rows as needed.
-
-**Projects section** (`PROJECTS-START` … `PROJECTS-END`, between Experience and Education)
-1. Delete the two marker lines.
-2. Fill in the cards: replace every `[…]` (title, year, domain, summary, problem, result, technologies, links). Delete a link if it does not exist.
-3. Add `<li><a href="#projects">Projects</a></li>` to the nav, after Experience.
-4. Renumber the section labels: Projects `03`, Education `04`, Systems `05`, Contact `06`.
-5. Optionally point the hero button back to `#projects` with the text “View projects”.
-
-Card layout: the first card has `is-featured` and spans the full width. With 3 projects keep it as is; with 2 or 4 projects remove `is-featured` so the cards form an even grid. To add a card, copy an `<article class="project-card">` block.
-
-## Keep up to date
-
-- **After the ESA internship ends (Nov 2026):** update the hero status chip, the “Currently” stat, the “Currently” tile in About, the `is-current` timeline item and “Current” badges, `jobTitle`/`worksFor` in the JSON-LD block in `<head>`, and regenerate `assets/img/og-image.png`, which also mentions ESA.
-- **Hero phrases:** the rotating words after “Data & AI for” are the list in `data-rotator` (index.html, hero). Keep each phrase short enough for two lines; the first one is also the text shown without JavaScript and in the hidden screen-reader line next to it.
-- **Availability:** “early 2027” appears in the About “Looking for” box and next to “Open to new opportunities” in Contact.
-- **Skills marked as professional use:** chips with `class="is-pro"` get the cyan highlight; keep that class only for tools used in a job.
-- **Accent colour:** change `--accent` (and `--accent-*`) in `assets/css/style.css`.
-
-## Local preview
-
-Open `index.html` in a browser, or run a static server from the repository root:
-
-```
-python3 -m http.server 8000
-```
-
-then visit http://localhost:8000.
